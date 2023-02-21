@@ -316,7 +316,7 @@ body {
 }
 
  .button-left {
-  display: block;
+  display: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -332,7 +332,7 @@ body {
  }
 
  .button-right {
-  display: block;
+  display: none;
   z-index: 6;
   cursor: pointer;
   position: absolute;
