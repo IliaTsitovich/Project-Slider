@@ -111,6 +111,7 @@ function initSlider(options) {
                 moveSlider(this.dataset.index);
                 ulConteiner.querySelector(".active_hover_A").classList.remove("active_hover_A");
                 this.classList.add("active_hover_A");
+                
             })
         })
 
@@ -127,6 +128,7 @@ function initSlider(options) {
                 moveSlider(this.dataset.index);
                 sliderDots.querySelector(".active").classList.remove("active");
                 this.classList.add("active");
+                
             })
         })
     };
@@ -138,6 +140,11 @@ function initSlider(options) {
             sliderDots.querySelector(".active").classList.remove("active");
             sliderDots.querySelector(".n" + num).classList.add("active");
         }
+        if(options.navigate) {
+            ulConteiner.querySelector(".active_hover_A").classList.remove("active_hover_A");
+            ulConteiner.querySelector(".n" + num).classList.add("active_hover_A");
+        }
+        
         changeInfo(num)
 
     }
@@ -187,7 +194,8 @@ let sliderOptions = {
     info: true,
     dots: true,
     autoplay: false,
-    autoplayInterval:false
+    autoplayInterval:false,
+    navigate: true
 };
 
 document.addEventListener("DOMContentLoaded", function() {
